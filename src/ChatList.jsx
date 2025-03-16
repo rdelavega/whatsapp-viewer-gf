@@ -8,7 +8,7 @@ const ChatList = () => {
   const messagesPerPage = 50; // Cantidad de mensajes por página
 
   useEffect(() => {
-    fetch("/public/chat.json") // Cargar JSON del chat
+    fetch("/chat.json") // Cargar JSON del chat
       .then((res) => res.json())
       .then((data) => setMessages(data))
       .catch((err) => console.error("Error cargando el chat:", err));
